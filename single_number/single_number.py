@@ -1,11 +1,19 @@
 '''
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
+solution with bitwise operators
+https://wiki.python.org/moin/BitwiseOperators
 '''
 def single_number(arr):
     # Your code here
+    answer = 0
+    for i in arr:
+        #flip bit for each item in array
+        #items with duplicates get canceled out 
+        #leaving only the single number
+        answer ^= i
+    return answer
 
-    pass
 
 
 if __name__ == '__main__':
