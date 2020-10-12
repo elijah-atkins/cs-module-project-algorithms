@@ -1,8 +1,9 @@
 '''
 Input: an integer
 Returns: an integer
+https://www.geeksforgeeks.org/tribonacci-numbers/
 '''
-'''
+
 def eating_cookies(n):
     # Your code here
     #if there are less than zero cookies return 0
@@ -13,17 +14,17 @@ def eating_cookies(n):
         return 1
     else:
         return (eating_cookies(n-1) + eating_cookies(n-2) + eating_cookies(n-3))
-'''
-def cookie_tracker(arr):
-    next_value = sum(arr)
-    return arr[1:] + [next_value]
 
-def eating_cookies(n, cache=None):
-    tracker = [0,0,1]
-    while n > 1:
-        tracker = cookie_tracker(tracker)
-        n -= 1
-    return sum(tracker)
+# def cookie_tracker(arr):
+#     next_value = sum(arr)
+#     return arr[1:] + [next_value]
+
+# def eating_cookies(n, cache=None):
+#     tracker = [0,0,1]
+#     while n > 1:
+#         tracker = cookie_tracker(tracker)
+#         n -= 1
+#     return sum(tracker)
 import sys
 if __name__ == "__main__":
     # Use the main function here to test out your implementation

@@ -4,8 +4,17 @@ import sys
 
 def making_change(amount, denominations):
   # Your code here
+  #create array with number of options for each amount
+  #There is only one way to give change for zero dollars
+  #There is exaclty one way to give change in pennies to every amount over zero
+  #There are no new ways to give change until the amount >= than any denomination
+  #once 
+  cache = [1] + [0] * amount
+  for coin in denominations:
+    for i in range(coin, amount+1):
+      cache[i] += cache[i-coin]
+  return(cache[amount])
 
-  pass
 
 
 if __name__ == "__main__":
